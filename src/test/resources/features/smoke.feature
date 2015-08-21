@@ -11,6 +11,9 @@ Feature: MK enter game
     Given game loaded
     When click on "Press start" button
     Then I see the game title "Select Player"
+    And I see a "player1" text box
+    And I see a "player2" text box
+    And I see a button with text "Fight"
 
 #  Scenario: login exitoso
 #    Given ingreso al juego

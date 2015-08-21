@@ -1,2 +1,11 @@
 <h1 id="mortal-kombat">${message}</h1>
+<form method="post" action="/fight">
+ <label for="player1">Player 1
+   <input id="player1" name="player1" type="text"/>
+ </label>
+ <label for="player1">Player 1
+   <input id="player2" name="player2" type="text"/>
+ </label>
+ <input type="submit" id="mortal-kombat-button" name="mortal-kombat-button" value="Fight"/>
+</form>
 

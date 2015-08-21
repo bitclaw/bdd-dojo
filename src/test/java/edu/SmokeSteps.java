@@ -43,6 +43,11 @@ public class SmokeSteps {
         $(By.cssSelector("#mortal-kombat-button")).click();
     }
 
+    @And("^I see a \"([^\"]*)\" text box$")
+    public void I_see_a_text_box(String playerName) throws Throwable {
+        $(By.cssSelector("#"+playerName)).click();
+    }
+
 //    @Given("^ingreso al juego$")
 //    public void ingreso_al_juego() throws Throwable {
 //        Selenide.open("http://localhost:4567/");
