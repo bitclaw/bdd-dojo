@@ -17,6 +17,19 @@ apt-get install -y oracle-java7-set-default
 Install Gradle
 `sudo apt-get install gradle`
 
+Gradle useful commands:
+
+`gradle build --info` Gets dependencies
+`gradle -version`
+
+Ubuntu based distros JAVA path fix:
+Add the following to your .bashrc `vi ~/.bashrc`
+
+```
+# Fix for gradle , more info here: http://ubuntuforums.org/showthread.php?t=2241886
+export JAVA_HOME=/usr/lib/jvm/java-8-oracle
+```
+
 
 Project Base for TDD and ATDD with java
 

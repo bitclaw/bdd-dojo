@@ -1,16 +1,7 @@
 apply plugin: 'java'
-buildscript {
-    repositories { mavenCentral() }
-    dependencies { classpath 'org.ajoberstar:gradle-jacoco:0.2.0' }
-}
-
 apply plugin: 'jacoco'
-//apply plugin: 'jacoco'
-
 
 defaultTasks 'clean','test', 'jacocoTestReport'
-
-
 sourceCompatibility = 1.8
 
 repositories {
@@ -46,10 +37,11 @@ dependencies {
     testCompile'org.mockito:mockito-all:1.10.19'
     testCompile'com.codeborne:selenide:2.21'
     testCompile group: 'junit', name: 'junit', version: '4.12'
-clea
+
     compile 'cglib:cglib-nodep:2.2.2'
     compile 'org.apache.spark:spark-core_2.10:1.2.1'
     compile 'com.sparkjava:spark-template-velocity:2.0.0'
+    compile 'org.ajoberstar:gradle-jacoco:0.2.0'
 
 }
 
