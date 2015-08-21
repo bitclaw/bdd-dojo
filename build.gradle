@@ -39,7 +39,6 @@ dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
 
     compile 'cglib:cglib-nodep:2.2.2'
-    compile 'org.apache.spark:spark-core_2.10:1.2.1'
     compile 'com.sparkjava:spark-template-velocity:2.0.0'
     compile 'org.ajoberstar:gradle-jacoco:0.2.0'
 
