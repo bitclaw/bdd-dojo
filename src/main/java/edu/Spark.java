@@ -15,8 +15,8 @@ public class Spark {
 
         get("/", (request, response) -> {
             Map<String, Object> model = new HashMap<>();
-            model.put("welcome", "Hola Mundo");
-            return new ModelAndView(model, "index.wm");
+            model.put("message", "Mortal Kombat");
+            return new ModelAndView(model, "mortal-kombat-start.wm");
         }, new VelocityTemplateEngine());
 
         post("/juego", (request, response) -> {
