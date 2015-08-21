@@ -9,7 +9,14 @@ Feature: login
 
   Scenario: login exitoso
     Given ingreso al juego
-    When ingreso "Daniel" como usario
+    When ingreso "Daniel" como usuario
     And password "1234"
     And hago login
-    Then veo el mensaje "iniciaste tu juego"
+    Then inicia el juego con este mensaje "iniciaste tu juego"
+
+  Scenario: login fallida
+    Given ingreso al juego
+    When ingreso "Pepito" como usuario
+    And password "123456"
+    And hago login
+    Then inicia el juego con este mensaje "credenciales invalidas"

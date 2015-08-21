@@ -14,7 +14,6 @@ import static com.codeborne.selenide.Selenide.$;
 public class SmokeSteps {
 
     {
-        //System.setProperty("webdriver.chrome.driver", "E:\\desarrollo\\herramientas\\chromedriver.exe");
         System.setProperty("webdriver.chrome.driver", "/home/bitclaw/chrome-driver/chromedriver");
         WebDriverRunner.setWebDriver(new ChromeDriver());
     }
@@ -22,6 +21,11 @@ public class SmokeSteps {
     @Given("^ingreso al juego$")
     public void ingreso_al_juego() throws Throwable {
         Selenide.open("http://localhost:4567/");
+    }
+
+    @Then("^veo el mensaje \"([^\"]*)\"$")
+    public void veo_el_mensaje(String message) throws Throwable {
+        $(By.id("welcome")).shouldHave(text(message));
     }
 
     @Then("^veo el mensaje \"([^\"]*)\"$")

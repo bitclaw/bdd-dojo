@@ -12,17 +12,27 @@ public class Spark {
 
     public static void main(String[] args) {
 
-//        get("/", (request, response) -> {
-//            Map<String, Object> model = new HashMap<>();
-//            model.put("welcome", "Hola Mundo");
-//            return new ModelAndView(model, "index.wm");
-//        }, new VelocityTemplateEngine());
+        get("/", (request, response) -> {
+            Map<String, Object> model = new HashMap<>();
+            model.put("welcome", "Hola Mundo");
+            return new ModelAndView(model, "index.wm");
+        }, new VelocityTemplateEngine());
 
+        post("/juego", (request, response) -> {
+            Map<String, Object> model = new HashMap<>();
 
-        get("/",(request, response) -> {
-            return "<h1 id=\"welcome\">Hola Mundo</h1>";
-        });
+            String user = request.queryParams('usuario');
+            String texto = "";
 
+            if (user.equals('Daniel')) {
+
+            } else {
+
+            }
+
+            model.put("inicioJuego", "iniciaste tu juego");
+            return new ModelAndView(model, "juego.wm");
+        }, new VelocityTemplateEngine());
     }
 
 }
