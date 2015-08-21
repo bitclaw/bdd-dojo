@@ -14,7 +14,8 @@ import static com.codeborne.selenide.Selenide.$;
 public class SmokeSteps {
 
     {
-        System.setProperty("webdriver.chrome.driver", "E:\\desarrollo\\herramientas\\chromedriver.exe");
+        //System.setProperty("webdriver.chrome.driver", "E:\\desarrollo\\herramientas\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "/home/bitclaw/chrome-driver/chromedriver");
         WebDriverRunner.setWebDriver(new ChromeDriver());
     }
 
