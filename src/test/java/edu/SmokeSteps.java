@@ -28,8 +28,8 @@ public class SmokeSteps {
         $(By.id("welcome")).shouldHave(text(message));
     }
 
-    @Then("^veo el mensaje \"([^\"]*)\"$")
-    public void veo_el_mensaje(String message) throws Throwable {
+    @Then("^inicia el juego con este mensaje \"([^\"]*)\"$")
+    public void inicia_el_juego_con_este_mensaje(String message) throws Throwable {
         $(By.id("welcome")).shouldHave(text(message));
     }
 }
