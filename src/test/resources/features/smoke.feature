@@ -15,6 +15,13 @@ Feature: MK enter game
     And I see a "player2" text box
     And I see a button with text "Fight"
 
+  Scenario: Start a fight
+    Given player selected
+    When click on "Fight" button
+    Then I see "player1" life gauge
+    And I see "player2" life gauge
+
+
 #  Scenario: login exitoso
 #    Given ingreso al juego
 #    When ingreso "Daniel" como usuario
