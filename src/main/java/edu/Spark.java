@@ -19,7 +19,7 @@ public class Spark {
             return new ModelAndView(model, "mortal-kombat-start.wm");
         }, new VelocityTemplateEngine());
 
-        post("/juego", (request, response) -> {
+        post("/select-player", (request, response) -> {
             Map<String, Object> model = new HashMap<>();
 
 //            String user = request.queryParams('usuario');
@@ -31,8 +31,8 @@ public class Spark {
 //
 //            }
 
-            model.put("inicioJuego", "iniciaste tu juego");
-            return new ModelAndView(model, "juego.wm");
+            model.put("message", "Select player");
+            return new ModelAndView(model, "select-player.wm");
         }, new VelocityTemplateEngine());
     }
 
