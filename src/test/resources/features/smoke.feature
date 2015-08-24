@@ -20,7 +20,7 @@ Feature: MK enter game
     When click on "Fight" button
     Then I see "player1" life gauge
     And I see "player2" life gauge
-
++
 
 #  Scenario: login exitoso
 #    Given ingreso al juego
